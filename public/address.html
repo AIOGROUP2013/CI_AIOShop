@@ -1,0 +1,245 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>AIO SHOP</title>
+	<link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="javascript/jquery.js"></script>
+	<script type="text/javascript" src="javascript/jquery-ui-1.8.13.custom.min.js"></script>
+
+    <script type="text/javascript" src="javascript/Java.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			// Tabs
+			$('#tabs').tabs();
+		});
+	</script>
+</head>
+<body>
+<!-- div contain chứa toàn bộ trang web-->
+	<article id="contain">
+    
+    <!--div header trên cùng của trang chứa logo , lời giới thiệu --->
+        <header id="top_header">
+               <div id="topmenu" >
+                      <div id="login_menu">
+                          <ul>
+                              <li> <a href="#">Đăng ký</a> </li>
+                              <li id="buttonlogin"> <a>Đăng nhập</a> </li>
+                              <div class="clear"></div>
+                          </ul>
+                      </div>
+                   <div id="show_login">
+                   <div  id="tamgiac_login"></div>
+                      <div id="formlogin">
+                          <form>
+                              <h2>Đăng nhập</h2>
+                              <div id="line"></div>
+                              <p class="email">Email:</p>
+                              <input type="text" id="input_username" name="user_login" size="30" value="" class="input_login">
+                              <div class="arrow"></div>
+                              <p class="error">Địa chỉ email không chính xác</p>
+                              <p class="email">Mật khẩu:</p>
+                              <input type="text" id="input_pass" name="user_login" size="30" value="" class="input_login">
+                              <div class="arrow"></div>
+                              <p class="error">Vui lòng nhập mật khẩu</p>
+                              <div id="chexbox">
+                              <input class="valign checkbox" type="checkbox" name="remember_me" id="remember_me_popup" value="Y" checked="checked">
+
+                              <label for="remember_me_popup" class="valign">Nhớ trạng thái đăng nhập</label>
+                              </div>
+                              <input type="submit" name="dispatch[auth.login]" value="Đăng nhập">
+                              <span id="span_quenmatkhau">[</span> <a href="#" class="forgotpass">Quên mật khẩu?</a> <span>]</span>
+                          </form>
+                      </div>
+                   </div>
+               </div>
+            <div id="topmenu_red">
+                  <div id="content_red">
+                      <div id="logon_red">
+
+                      <a href="#">  <img src="logo-aioshopvn.png"></a>
+                      </div>
+					  <p><a href="#">Tên loại hoa</a></p>
+                      <p><a href="#">Tên loại hoa</a></p>
+                      <p><a href="#">Tên loại hoa</a></p>
+                      <p><a href="#">Tên loại hoa</a></p>
+                      <p><a href="#">Tên loại hoa</a></p>
+                      <p id="btnshow_search"><a href="#"><img src="icon_seach.png"></a></p>
+                  </div>
+                <div class="clear"></div>
+                <div id="show_seach">
+                    <div  id="tamgiac_show_seach"></div>
+                    <div id="backgroundsearch">
+                        <div id="seachbox">
+                            <form id="tfnewsearch" method="get" action="#">
+                                <input type="text" class="textinput" name="q" placeholder="Bạn muốn tìm gì hôm nay?" size="21" maxlength="80">
+                                <input type="submit" value="      Tìm" class="buttonsearch">
+                            </form>
+                        </div>
+                </div>
+                </div>
+
+            </div>
+        </header>
+     <!--kết thúc div header-->
+     <div class="clear"></div>
+     <!-- div menu  -->
+             <div id="wraper_content">   <!-- Chiều dài full -->
+                     <div id="content_web">   <!-- Chiều dài 995px -->
+                            <div id="row_black">
+                                <a href="#">  <img src="icon_home.png"></a>
+                                <a href="#"> <img src="icon_arrow.png"></a>
+                                <a href="#" id="row_text">Địa chỉ thanh toán và giao hàng</a>
+                                <div class="clear"></div>
+                                <div id="row_black_float_right">
+                                    <img src="icon/icon_seach.png">
+                                    <a>08 7305 5707</a>
+                                    <a href="#">Hỗ trợ 1</a>
+                                    <a href="#">Hỗ trợ 2</a>
+                                </div>
+                            </div>  <!-- Hết row_black -->
+                            <!-- Hai sản phẩm đầu tiên -->
+                        <article id="address">
+							<form>
+								<h1>Thông tin người thanh toán</h1>
+								<p>
+									<label for="billFName">Họ và tên lót:</label>
+									<input id="billFName" name="billFName" type="text" required="true"><span class="alert">*</span>
+								</p>
+								<p>
+									<label for="billLName">Tên:</label>
+									<input id="billLName" name="billLName" type="text" required="true"><span class="alert">*</span>
+								</p>
+								<p>
+									<label for="billAddress1">Số nhà / Tên đường:</label>
+									<input id="billAddress1" name="billAddress1" type="text" required="true"><span class="alert">*</span>
+								</p>
+								<p>
+									<label for="billAddress2">Phường / Xã</label>
+									<input id="billAddress2" name="billAddress2" type="text">
+								</p>
+								<p>
+									<label for="billAddress3">Quận / Huyện:</label>
+									<input id="billAddress3" name="billAddress3" type="text" required="true"><span class="alert">*</span>
+								</p>
+								<p>
+									<label for="billCity">Tỉnh / Thành phố:</label>
+									<select id="billCity" name="billCountry" onchange="javascript:startDisplay();" required="true">
+										<option value="HCM">Hồ Chí Minh</option>
+										<option value="HN">Hà Nội</option>
+										<option value="QNG">Quảng Ngãi</option>
+										<option value="QT">Quảng Trị</option>
+										<option value="BT">Bến Tre</option>
+
+									</select>
+								</p>
+								<p>
+									<label for="billZip">Mã bưu chính:</label>
+									<input id="billZip" name="billZip" type="text" required="true"><span class="alert">*</span>
+								</p>
+								<p>
+									<a id="billEqualShip">Địa chỉ thanh toán là địa chỉ giao hàng</a>
+									<input name="billEqualShip" type="checkbox" id="billEqualShip" value="Y" checked>
+								</p>
+								<p>
+									<label for="email">Email:</label>
+									<input id="email" name="email" type="email" required="true"><span class="alert">*</span>
+								</p>
+								<p>
+									<label for="phone">Số điện thoại:</label>
+									<span style="display: none;" class="helper">Please enter your <strong>phone number</strong>.<br>We might need to contact you with regards to your order.</span>
+									<input id="phone" name="phone" type="tel" required="true"><span class="alert">*</span>
+								</p>
+							</form>
+							<form id="ship">
+								<h1>Địa chỉ giao hàng</h1>
+								<p>
+									<label for="shipFName">Họ và tên lót:</label>
+									<input name="shipFName" type="text" disabled id="shipFName" required="true"><span class="alert">*</span>
+								</p>
+								<p>
+									<label for="shipLName">Tên:</label>
+									<input id="shipLName" type="text" disabled name="shipLName" required="true"><span class="alert">*</span>
+								</p>
+								<p>
+									<label for="shipAddress1">Số nhà / Tên đường:</label>
+									<input name="shipAddress1" type="text" disabled id="shipAddress1" required="true"><span class="alert">*</span>
+								</p>
+								<p>
+									<label for="shipAddress2">Phường / Xã</label>
+									<input name="shipAddress2" type="text" disabled id="shipAddress2">
+								</p>
+								<p>
+									<label for="shipAddress3">Quận / Huyện</label>
+									<input name="shipAddress3" type="text" disabled id="shipAddress3" required="true"><span class="alert">*</span>
+								</p>
+								<p>
+									<label for="shipCity">Tỉnh / Thành phố:</label>
+									<select id="shipCity" name="shipCity" onchange="javascript:startDisplay();" required="true">
+										<option value="HCM">Hồ Chí Minh</option>
+										<option value="HN">Hà Nội</option>
+										<option value="QNG">Quảng Ngãi</option>
+										<option value="QT">Quảng Trị</option>
+										<option value="BT">Bến Tre</option>
+									</select>
+								</p>
+								<p>
+									<label for="shipZip">Mã bưu chính:</label>
+								<input name="shipZip" type="text" disabled id="shipZip" required="true"><span class="alert">*</span></p>						
+								<div id="tabs">
+									<ul>
+										<li><a href="#tabs-1" class="first">Ngân lượng</a></li>
+										<li><a href="#tabs-2">Thanh toán khi giao hàng</a></li>
+									</ul>
+									<section id="tabs-1">
+										<p>Thanh toán sẽ hoàn thành trong khoảng từ 10 phút đến 24 giờ.</p>
+										<p>
+											<label>&nbsp;</label><button type="submit" class="continue">Thực hiện giao dịch</button>
+										</p>
+
+									</section>
+									<section id="tabs-2">
+										<p>Nhân viên giao dịch sẽ thanh toán tiền mặt khi giao hàng tại nhà.</p>
+										<p>
+											<label>&nbsp;</label><button type="submit" class="continue">Tiếp tục</button>
+										</p>
+									</section>
+								</div>
+							</form>
+							
+							<p>
+								  <button type="button">Quay lại</button>
+								</p>
+						</article>
+                         <div class="clear"></div>
+						 
+                         
+                     </div>
+             </div>
+        <!-- kết thúc div menu-->
+        
+        <!--div main chứa phần nội dung của trang -->
+        <div id="main">
+
+        
+		
+
+        </div>
+        <!--kết thúc div main-->
+		
+        <!--footer -->
+        <footer id="the_footer">
+			<div class="wrapper">
+				<span class="logo">AIO SHOP</span>
+				<a href="http://aioshop.vn" target="_blank" title="" class="right">Cửa hàng hoa trực tuyến</a> &copy; AIO Shop <a href="#">Bản đồ</a> <a href="#">Điều kiện sử dụng</a> <a href="#">Dịch vụ vận chuyển</a> <a href="#">Ý nghĩa loại hoa</a><a href="#">Trợ giúp</a> <br />
+				Số 01 - Đường 52 - KDC Đông Thủ Thiêm - P. Bình Trưng Đông - Q.2 - TPHCM <a href="mailto:info@aioshop.vn">info@aioshop.vn</a>
+			</div>
+        </footer>
+        <!-- kết thúc footer-->
+        
+     </article> <!--kết thúc div contain-->
+</body>
+</html>
+

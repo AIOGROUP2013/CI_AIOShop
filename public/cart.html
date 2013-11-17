@@ -1,0 +1,199 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>AIO SHOP</title>
+	<link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="javascript/jquery.js"></script>
+    <script type="text/javascript" src="javascript/Java.js"></script>
+	<script type="text/javascript">
+		$( document ).ready(function() {
+			$( "#billing" ).click(function() {
+			  window.open('address.html', '_self');
+			});
+		});
+	</script>
+
+</head>
+<body>
+<!-- div contain chứa toàn bộ trang web-->
+	<article id="contain">
+    
+    <!--div header trên cùng của trang chứa logo , lời giới thiệu --->
+        <header id="top_header">
+               <div id="topmenu" >
+                      <div id="login_menu">
+                          <ul>
+                              <li> <a href="#">Đăng ký</a> </li>
+                              <li id="buttonlogin"> <a>Đăng nhập</a> </li>
+                              <div class="clear"></div>
+                          </ul>
+                      </div>
+                   <div id="show_login">
+                   <div  id="tamgiac_login"></div>
+                      <div id="formlogin">
+                          <form>
+                              <h2>Đăng nhập</h2>
+                              <div id="line"></div>
+                              <p class="email">Email:</p>
+                              <input type="text" id="input_username" name="user_login" size="30" value="" class="input_login">
+                              <div class="arrow"></div>
+                              <p class="error">Địa chỉ email không chính xác</p>
+                              <p class="email">Mật khẩu:</p>
+                              <input type="text" id="input_pass" name="user_login" size="30" value="" class="input_login">
+                              <div class="arrow"></div>
+                              <p class="error">Vui lòng nhập mật khẩu</p>
+                              <div id="chexbox">
+                              <input class="valign checkbox" type="checkbox" name="remember_me" id="remember_me_popup" value="Y" checked="checked">
+
+                              <label for="remember_me_popup" class="valign">Nhớ trạng thái đăng nhập</label>
+                              </div>
+                              <input type="submit" name="dispatch[auth.login]" value="Đăng nhập">
+                              <span id="span_quenmatkhau">[</span> <a href="#" class="forgotpass">Quên mật khẩu?</a> <span>]</span>
+                          </form>
+                      </div>
+                   </div>
+               </div>
+            <div id="topmenu_red">
+                  <div id="content_red">
+                      <div id="logon_red">
+
+                      <a href="#">  <img src="logo-aioshopvn.png"></a>
+                      </div>
+                     <p><a href="#">Tên loại hoa</a></p>
+                      <p><a href="#">Tên loại hoa</a></p>
+                      <p><a href="#">Tên loại hoa</a></p>
+                      <p><a href="#">Tên loại hoa</a></p>
+                      <p><a href="#">Tên loại hoa</a></p>
+                      <p id="btnshow_search"><a href="#"><img src="icon_seach.png"></a></p>
+                  </div>
+                <div class="clear"></div>
+                <div id="show_seach">
+                    <div  id="tamgiac_show_seach"></div>
+                    <div id="backgroundsearch">
+                        <div id="seachbox">
+                            <form id="tfnewsearch" method="get" action="#">
+                                <input type="text" class="textinput" name="q" placeholder="Bạn muốn tìm gì hôm nay?" size="21" maxlength="80">
+                                <input type="submit" value="      Tìm" class="buttonsearch">
+                            </form>
+                        </div>
+                </div>
+                </div>
+
+            </div>
+        </header>
+     <!--kết thúc div header-->
+     <div class="clear"></div>
+     <!-- div menu  -->
+             <div id="wraper_content">   <!-- Chiều dài full -->
+                     <div id="content_web">   <!-- Chiều dài 995px -->
+                            <div id="row_black">
+                                <a href="#">  <img src="icon_home.png"></a>
+                                <a href="#"> <img src="icon_arrow.png"></a>
+                                <a href="#" id="row_text">Giỏ hàng</a>
+                                <div class="clear"></div>
+                                <div id="row_black_float_right">
+                                    <img src="icon/icon_seach.png">
+                                    <a>08 7305 5707</a>
+                                    <a href="#">Hỗ trợ 1</a>
+                                    <a href="#">Hỗ trợ 2</a>
+                                </div>
+                            </div>  <!-- Hết row_black -->
+                            <!-- Hai sản phẩm đầu tiên -->
+                         <article id="basket">
+							<button class="continue">Thanh toán</button>
+							<table width="100" border="1">
+								<tr>
+									<th scope="col" class="description">Tên sản phẩm</th>
+									<th scope="col" class="options">Thông tin</th>
+									<th align="right" scope="col" class="price">Giá</th>
+								</tr>
+								<tr>
+									<td align="left" valign="top" class="description"><a href="#"><img src="images_product/thumb.jpg" alt="Hoa yêu thương" class="left" /></a><p><a href="main.html">Hoa yêu thương</a><br /> Giỏ hoa tượng trưng cho gia đình, mỗi chú gấu là 1 thành viên, gia đình bạn có mấy thành viên sẽ có bấy nhiêu chú gấu. Đây sẽ là món quà cực kỳ ý nghĩa nếu tặng cho người thân trong gia đình bạn, với lời nhắn nhủ " Gia đình chúng ta sẽ mãi mãi hạnh phúc bên nhau nhé"... </p>
+									<td align="left" valign="top" class="options">
+										<dl>
+											<dt>Mã SP:</dt>
+											<dd>H12345</dd>
+											<dt>Loại:</dt>
+											<dd>Hoa chúc mừng</dd>
+											<dt>Số lượng:</dt>
+											<dd>5</dd>
+										</dl>
+										<button>Xóa khỏi giỏ hàng</button>
+									</td>
+									<td align="right" valign="top" class="price">500.000 VNĐ</td>
+								</tr>
+																<tr>
+									<td align="left" valign="top" class="description"><a href="#"><img src="images_product/sang-tinh-mo.jpg" alt="Sáng tinh mơ" class="left" /></a><p><a href="main.html">Sáng tinh mơ</a><br /> Bó hoa gửi tặng em yêu dấu với lời nhắn nhủ em luôn nhớ về em. </p>
+									<td align="left" valign="top" class="options">
+										<dl>
+											<dt>Mã SP:</dt>
+											<dd>H12345</dd>
+											<dt>Loại:</dt>
+											<dd>Hoa chúc mừng</dd>
+											<dt>Số lượng:</dt>
+											<dd>5</dd>
+										</dl>
+										<button>Xóa khỏi giỏ hàng</button>
+									</td>
+									<td align="right" valign="top" class="price">500.000 VNĐ</td>
+								</tr>
+																<tr>
+									<td align="left" valign="top" class="description"><a href="#"><img src="images_product/pink-is-perfect.jpg" alt="Hoa sinh nhật" class="left" /></a><p><a href="main.html">Hoa sinh nhật</a><br /> Mô tả hoa yêu thương </p>
+									<td align="left" valign="top" class="options">
+										<dl>
+											<dt>Mã SP:</dt>
+											<dd>H12345</dd>
+											<dt>Loại:</dt>
+											<dd>Hoa chúc mừng</dd>
+											<dt>Số lượng:</dt>
+											<dd>5</dd>
+										</dl>
+										<button>Xóa khỏi giỏ hàng</button>
+									</td>
+									<td align="right" valign="top" class="price">500.000 VNĐ</td>
+								</tr>
+							</table>
+							<img src="logo/creditcards.gif" class="safe" />
+							<div class="right">
+								<strong>Tổng tiền:</strong> <em>152000 VNĐ</em><br />
+								<p>
+									<select>
+										<option>Giao hàng 3-5 ngày (Miễn phí)</option>
+										<option>Giao hàng trong ngày (50.000 VNĐ)</option>
+									</select> <em>50.000 VNĐ</em>
+								</p>
+								<strong>Tổng tiền đơn hàng: </strong> <em>202000 VNĐ</em>
+							</div>
+							<button class="continue" id='billing'>Thanh toán</button>
+						</article>
+                         <div class="clear"></div>
+                         
+                     </div>
+             </div>
+        <!-- kết thúc div menu-->
+        
+        <!--div main chứa phần nội dung của trang -->
+        <div id="main">
+
+        
+		
+
+        </div>
+        <!--kết thúc div main-->
+		
+        <!--footer -->
+        <footer id="the_footer">
+			<div class="wrapper">
+				<span class="logo">AIO SHOP</span>
+				<a href="http://aioshop.vn" target="_blank" title="" class="right">Cửa hàng hoa trực tuyến</a> &copy; AIO Shop <a href="#">Bản đồ</a> <a href="#">Điều kiện sử dụng</a> <a href="#">Dịch vụ vận chuyển</a> <a href="#">Ý nghĩa loại hoa</a><a href="#">Trợ giúp</a> <br />
+				Số 01 - Đường 52 - KDC Đông Thủ Thiêm - P. Bình Trưng Đông - Q.2 - TPHCM <a href="mailto:info@aioshop.vn">info@aioshop.vn</a>
+			</div>
+        </footer>
+        <!-- kết thúc footer-->
+        
+     </article> <!--kết thúc div contain-->
+</body>
+</html>
+
